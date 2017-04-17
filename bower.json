@@ -1,0 +1,21 @@
+{
+  "name": "mymusiclisten",
+  "description": "Un reproductor de musica sencillo construido con electron",
+  "main": "main.js",
+  "authors": [
+    "[object Object]"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-material-design": "^4.0.2"
+  }
+}

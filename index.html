@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+        <!-- Bootstrap CSS -->
+        <!--<link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">-->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+        <!--Bootstrap Theme-->
+        <!--<link rel="stylesheet" href="RendererProcess/css/bootstrap.min.css">-->
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        
+        <div class="container" ng-app="app">
+            
+            <div class="row" ng-controller="mainController">
+                <h1 class="text-center">Angular Player</h1>
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div>
+                        <audio autoplay id="player" src="{{pista.path}}"></audio>
+                    </div>
+                    <pre>{{pilaDirectorio | json}} </pre>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <input type="text" class="form-control" ng-model="directorio" ng-keyup="eventEnlistar($event)">
+                    <div class="list-group">
+                        <button class="list-group-item" ng-if="pilaDirectorio.length !== 1" ng-dblclick="dblClickAtras()">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>&nbsp; Atras
+                        </button>
+                        <button class="list-group-item" ng-repeat="item in lista" ng-dblclick="dblClickSelect(item)">
+                            <span ng-if="item.isdir" class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>&nbsp; {{item.name}}
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!--SCRIPTS-->
+        <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+        <!-- jQuery -->
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <!--Angular JS-->
+        <script src="node_modules/angular/angular.js"></script>
+
+        <script src="RendererProcess/app.js"></script>
+
+        <!--END SCRIPTS-->
+        <script>if (window.module) module = window.module;</script>
+    </body>
+</html>

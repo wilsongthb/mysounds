@@ -1,0 +1,23 @@
+{
+  "name": "mymusiclisten",
+  "version": "1.0.0",
+  "description": "Un reproductor de musica sencillo construido con electron",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Wilson Pilco Nuñez",
+    "email": "wilsonaux1@gmail.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "bootstrap-material-design": "^0.5.10",
+    "jquery": "^3.2.1"
+  },
+  "dependencies": {
+    "bootstrap-material-design": "^0.5.10"
+  }
+}
